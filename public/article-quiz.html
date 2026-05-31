@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DeutschLift Article Quiz</title>
+    <link rel="stylesheet" href="/styles.css?v=7" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="page-topbar">
+        <a class="back-link" href="/">← Home</a>
+        <div>
+          <p class="eyebrow">Article Sprint</p>
+          <h1>Der, Die, Das</h1>
+        </div>
+        <a class="primary-action" href="/a1.html">Start A1</a>
+      </header>
+
+      <section class="quiz-arena quiz-page" id="articleQuiz" aria-label="German article quiz">
+        <div class="quiz-stage">
+          <div class="quiz-header">
+            <div>
+              <p class="eyebrow">Article Sprint</p>
+              <h2>Pick Der, Die, Or Das</h2>
+            </div>
+            <div class="quiz-score">
+              <span id="quizProgress">1 / 6</span>
+              <strong id="quizScore">0 XP</strong>
+            </div>
+          </div>
+
+          <div class="article-graphic" aria-hidden="true">
+            <span>der</span>
+            <span>die</span>
+            <span>das</span>
+          </div>
+
+          <div class="quiz-question">
+            <span class="tag" id="quizMeaning">coffee</span>
+            <p><span id="quizBlank">___</span> <strong id="quizNoun">Kaffee</strong></p>
+          </div>
+
+          <div class="article-choices" id="articleChoices" aria-label="Article choices">
+            <button type="button" data-article="der">der</button>
+            <button type="button" data-article="die">die</button>
+            <button type="button" data-article="das">das</button>
+          </div>
+
+          <p class="quiz-feedback" id="quizFeedback" aria-live="polite">Choose the article to start the streak.</p>
+
+          <div class="quiz-footer">
+            <div class="quiz-meter" aria-label="Quiz progress"><span id="quizMeter"></span></div>
+            <button class="secondary-action" id="nextQuizQuestion" type="button">Next</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="/app.js?v=7" type="module"></script>
+  </body>
+</html>

@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DeutschLift A1</title>
+    <link rel="stylesheet" href="/styles.css?v=7" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="page-topbar">
+        <a class="back-link" href="/">← Home</a>
+        <div>
+          <p class="eyebrow">A1 Lesson Path</p>
+          <h1>Start German</h1>
+        </div>
+        <a class="secondary-action" href="/article-quiz.html">Article Quiz</a>
+      </header>
+
+      <section class="learning-grid" aria-label="German learning workspace">
+        <aside class="lesson-rail">
+          <div class="profile-strip">
+            <div class="avatar">DL</div>
+            <div>
+              <strong>A1 Explorer</strong>
+              <span>12 day streak</span>
+            </div>
+          </div>
+
+          <div class="progress-card">
+            <div class="card-heading">
+              <span>Today</span>
+              <strong>64%</strong>
+            </div>
+            <div class="progress-track" aria-label="Today progress">
+              <span style="width: 64%"></span>
+            </div>
+          </div>
+
+          <nav class="lesson-list" aria-label="Lesson map">
+            <button class="lesson-pill active" data-lesson="cafe">
+              <span>01</span>
+              Cafe Basics
+            </button>
+            <button class="lesson-pill" data-lesson="word-order">
+              <span>02</span>
+              Word Order
+            </button>
+            <button class="lesson-pill" data-lesson="travel">
+              <span>03</span>
+              Travel Phrases
+            </button>
+            <button class="lesson-pill" data-lesson="corrections">
+              <span>04</span>
+              Corrections
+            </button>
+          </nav>
+        </aside>
+
+        <section class="practice-panel">
+          <div class="panel-header">
+            <div>
+              <p class="eyebrow">Mini Lesson</p>
+              <h2 id="lessonTitle">Order Like A Local</h2>
+            </div>
+            <button class="icon-button" id="resetChat" type="button" aria-label="Reset chat" title="Reset chat">↻</button>
+          </div>
+
+          <div class="phrase-card">
+            <span class="tag">Phrase</span>
+            <p id="lessonPhrase">Ich hätte gern einen Kaffee.</p>
+            <small id="lessonTranslation">I would like a coffee.</small>
+          </div>
+
+          <div class="exercise-card">
+            <div>
+              <span class="tag">Practice</span>
+              <p id="exerciseQuestion">Fill the gap: Ich ___ gern Wasser.</p>
+            </div>
+            <div class="answer-row">
+              <input id="exerciseInput" type="text" placeholder="type the missing word" autocomplete="off" />
+              <button id="checkAnswer" type="button">Check</button>
+            </div>
+            <p class="feedback" id="exerciseFeedback" aria-live="polite"></p>
+          </div>
+        </section>
+
+        <section class="chat-panel" aria-label="AI tutor chat">
+          <div class="panel-header">
+            <div>
+              <p class="eyebrow">Tutor Chat</p>
+              <h2>Ask In Any Language</h2>
+            </div>
+            <span class="status-dot" aria-label="AI tutor is ready"></span>
+          </div>
+
+          <div class="chat-log" id="chatLog" aria-live="polite">
+            <article class="message tutor">
+              <strong>DeutschLift</strong>
+              <p>Willkommen! Start with the lesson, or ask me a German question.</p>
+            </article>
+          </div>
+
+          <form class="chat-form" id="chatForm">
+            <input
+              id="chatInput"
+              type="text"
+              placeholder="Ask about German grammar, words, or phrases..."
+              autocomplete="off"
+              required
+            />
+            <button type="submit">Send</button>
+          </form>
+        </section>
+      </section>
+    </main>
+
+    <script src="/app.js?v=7" type="module"></script>
+  </body>
+</html>
